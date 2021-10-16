@@ -1,5 +1,11 @@
-# Tips
 소소한 팁들
+
+목차 <br>
+[1. Linux](#Linux) <br>
+[2. Python](#Python) <br>
+[3. Pycharm](#Pycharm) <br>
+[4. Django](#Django) <br>
+<br>
 
 # Linux
 ### Ubuntu 16.04에 Anaconda 설치
@@ -22,7 +28,6 @@ requirements.txt는 다수의 패키지 목록이 나열되어 있는 텍스트 
 ```shell
 pip3 install -r requirements.txt
 ```
-<br>
 
 # Pycharm 
 ### Pycharm 터미널 설정 
