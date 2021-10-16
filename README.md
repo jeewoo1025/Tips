@@ -1,9 +1,9 @@
 소소한 팁들
 
-[1. Linux](#Linux) <br>
-[2. Python](#Python) <br>
-[3. Pycharm](#Pycharm) <br>
-[4. Django](#Django) <br>
+[## 1. Linux](https://github.com/jeewoo1025/Tips/blob/master/Pycharm.md) <br>
+[## 2. Python](#Python) <br>
+[## 3. Pycharm](#Pycharm) <br>
+[## 4. Django](#Django) <br>
 <br>
 
 # Linux
@@ -27,12 +27,6 @@ requirements.txt는 다수의 패키지 목록이 나열되어 있는 텍스트 
 ```shell
 pip3 install -r requirements.txt
 ```
-
-# Pycharm 
-### Pycharm 터미널 설정 
-프로젝트 진행시, 터미널을 통해 작업이 이루어지는 경우가 빈번하다. 그래서 터미널을 `Git Bash` 쉘로 설정해주고 시작해야 한다.
-* link : https://opentutorials.org/course/3718/24657
-<br>
 
 # Django
 ## 기본구조
