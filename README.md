@@ -1,6 +1,6 @@
 소소한 팁들
 
-목차 <br>
+목차
 [1. Linux](#Linux) <br>
 [2. Python](#Python) <br>
 [3. Pycharm](#Pycharm) <br>
