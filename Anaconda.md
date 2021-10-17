@@ -5,7 +5,7 @@ conda uninstall gensim
 conda install gensim==3.4.0
 ```
 
-### 가상환경에 대한 정보 확인하기
+## 가상환경에 대한 정보 확인하기
 * 설치된 가상환경에 대한 정보
 ```shell
 conda info --envs
