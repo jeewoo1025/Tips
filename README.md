@@ -4,6 +4,10 @@
 * Ubuntu 16.04에 Anaconda 설치
 <br>
 
+## [Anaconda]()
+* import gensim시에 cannot import name 'open' from 'smart_open' 이슈
+<br>
+
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 
 * requirements.txt로 패키지 한번에 관리하기
 <br>
