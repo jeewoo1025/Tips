@@ -13,6 +13,10 @@
 * requirements.txt로 패키지 한번에 관리하기
 <br>
 
+## [Java]()
+* 거듭제곱 Math.pow()
+<br>
+
 ## [Pycharm](https://github.com/jeewoo1025/Tips/blob/master/Pycharm.md) 
 * Pycharm 터미널 설정
 <br>
