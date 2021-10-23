@@ -13,7 +13,7 @@
 * requirements.txt로 패키지 한번에 관리하기
 <br>
 
-## [Java]()
+## [Java](https://github.com/jeewoo1025/Tips/blob/master/Java.md)
 * 거듭제곱 Math.pow()
 <br>
 
