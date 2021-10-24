@@ -11,6 +11,7 @@
 
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 
 * requirements.txt로 패키지 한번에 관리하기
+* Python library
 <br>
 
 ## [Java](https://github.com/jeewoo1025/Tips/blob/master/Java.md)
