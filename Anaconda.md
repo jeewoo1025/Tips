@@ -32,3 +32,8 @@ conda install jupyter
 ```shell
 conda install ipython
 ```
+<br>
+
+## Ignoring invalid distribution -ip 에러 해결
+주어진 경로로 이동한 후, '~'로 시작되는 디렉토리 삭제하기. 이유는 임시폴더를 만들어놨는데 아직 지우지 않았거나 이름이 잘못 배정되어있는 경우에 저런폴더가 나타난다.<br>
+![image](https://user-images.githubusercontent.com/39071676/139386520-6939fafb-eff2-4907-9329-2dc2711eb935.png)
