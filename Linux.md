@@ -11,3 +11,10 @@ source ~/.bashrc
 ```
 그 이후 `conda list` 등의 명령어가 정상적으로 동작하는지 확인한다.
 <br>
+
+### wget 명령어
+`Web GET`의 약어로 웹 상의 파일을 다운로드할 때 사용하는 명령어
+* wget 옵션 설명 : https://hippogrammer.tistory.com/158
+```shell
+wget [옵션] [URL]
+```
