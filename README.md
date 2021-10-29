@@ -1,6 +1,6 @@
 개발하면서 알게된 소소한 팁들
 
-## [ML/DL] (https://github.com/jeewoo1025/Tips/blob/master/ML.md)
+## [ML/DL](https://github.com/jeewoo1025/Tips/blob/master/ML.md)
 <br>
 
 ## [Linux](https://github.com/jeewoo1025/Tips/blob/master/Linux.md) 
