@@ -8,6 +8,7 @@
 * import gensim시에 cannot import name 'open' from 'smart_open' 이슈
 * 가상환경에 대한 정보 확인하기
 * Ignoring invalid distribution -ip 에러 해결
+* Tensorflow 설치 오류
 <br>
 
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 
