@@ -2,6 +2,7 @@
 
 ## [PyTorch](https://github.com/jeewoo1025/Tips/blob/master/PyTorch.md)
 * GPU에서 저장하고 GPU에서 불러오기
+* squeeze, unsqueeze 함수
 <br>
 
 ## [Linux](https://github.com/jeewoo1025/Tips/blob/master/Linux.md) 
