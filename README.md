@@ -24,6 +24,8 @@
 
 ## [Java](https://github.com/jeewoo1025/Tips/blob/master/Java.md)
 * 거듭제곱 Math.pow()
+* 올림 Math.ceil()
+* 내림 Math.floor()
 <br>
 
 ## [Pycharm](https://github.com/jeewoo1025/Tips/blob/master/Pycharm.md) 
