@@ -31,3 +31,13 @@ x = x.squeeze() # [3,1,20,128] --> [3,20,128]
 x = torch.rand(3,20,128)
 x = x.unsqueeze(dim=1) # [3,20,128] -> [3,1,20,128]
 ```
+<br>
+
+### torch.no_grad()
+해당 블록을 history 트래킹 하지 않겠다는 뜻이다.
+```python
+with torch.no_grad():
+    pred = model(x)
+    predicted, actual = classes[pred[0].argmax(0)], classes[y]
+    print(f'Predicted: "{predicted}", Actual: "{actual}"')
+```
