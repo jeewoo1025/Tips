@@ -21,3 +21,18 @@ System.out.println(Math.ceil(10.675));  // 10.0
 System.out.println(Math.ceil(-9.12));   // -10.0
 ```
 <br>
+
+## String.format(String format, Object args)
+문자열 형식을 설정하는 메소드로 정수, 문자열, 실수형 형식이 다르다.
+```java
+int num = 23;
+float num2 = 123.45678;
+
+// 정수 
+System.out.println(String.format("%5d_", i));  //    23_, 오른쪽 정렬
+System.out.println(String.format("%-5d_", i));  // 23   _, 왼쪽 정렬
+
+// 실수
+System.out.println(String.format("%.3f_", n));  // 123.457_, 소수점 아래 3자로 나타냄
+System.out.println(String.format("%15.2f_", n)); //          123.46_, 글자 길이 15, 소수점 아래 2자로 나타냄
+```
