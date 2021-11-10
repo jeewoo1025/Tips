@@ -34,7 +34,8 @@ x = x.unsqueeze(dim=1) # [3,20,128] -> [3,1,20,128]
 <br>
 
 ### torch.no_grad()
-해당 블록을 history 트래킹 하지 않겠다는 뜻이다.
+해당 블록을 history 트래킹 하지 않겠다는 뜻이다. 
+역전파를 수행후 모델의 기울기를 이용하여 가중치와 bias를 업데이트한다. 다음 기울기 계산에 기록되지 않도록 torch.no_grad()를 실행한다.
 ```python
 with torch.no_grad():
     pred = model(x)
