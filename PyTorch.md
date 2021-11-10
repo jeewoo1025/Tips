@@ -70,3 +70,14 @@ with torch.no_grad():
 6. torch.linspace() : 시작점과 끝점을 주어진 갯수만큼 균등하게 나눈 간격점을 행벡터로 출력
 7. torch.logspace() : 시작점과 끝점을 주어진 갯수만큼 로그간격으로 나눈 간격점을 행벡터로 출력
 <br>
+
+### optim 패키지
+PyTorch의 optim 패키지는 최적화 알고리즘에 대한 아이디어를 추상화하고 일반적으로 사용하는 최적화 알고리즘 구현체를 제공한다
+* SGD, AdaGrad, RMSProp, Adam 
+```python
+optimizer = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
+
+# optimizer의 step 함수를 호출하면 매개변수가 갱신된다
+optimizer.step()
+```
+<br>
