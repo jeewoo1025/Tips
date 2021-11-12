@@ -6,6 +6,7 @@
 * torch.no_grad()
 * Tensor - 정의, 생성
 * optim 패키지
+* Tensor 합치기: cat(), stack()
 <br>
 
 ## [Linux](https://github.com/jeewoo1025/Tips/blob/master/Linux.md) 
