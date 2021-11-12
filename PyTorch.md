@@ -82,3 +82,18 @@ optimizer = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
 optimizer.step()
 ```
 <br>
+
+### Tensor 합치기: cat(), stack()
+**cat 함수** : concatenate를 해주는 함수이고 차원의 수는 유지된다.  <br>
+**stack 함수** : 지정하는 차원으로 확장하여 tensor를 쌓아주는 함수이다. (차원의 수가 증가한다) <br>
+```python
+import torch
+
+batch_size, N, K = 3, 10, 256
+
+x = torch.rand(batch_size, N, K) # [2, 10, 256]
+y = torch.rand(batch_size, N, K) # [2, 10, 256]
+
+output1 = torch.cat([x,y]) # [4, 10, 256]
+output2 = torch.stack([x,y]) # [M,2,N,K]
+```
