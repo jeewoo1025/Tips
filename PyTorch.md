@@ -7,7 +7,7 @@ torch.save(model.state_dict(), PATH)
 **저장한 모델을 GPU에서 로드**
 ```shell
 # GPU device 저장
-device = torch.device("cuda")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 모델 불러오기
 model = TheModelClass(*args, **kwargs)
