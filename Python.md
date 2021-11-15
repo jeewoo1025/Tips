@@ -51,4 +51,37 @@ class 자식클래스(부모클래스1, 부모클래스2):
 ```
 <br>
 
+### glob
+glob는 파일들의 리스트를 뽑을 때 사용하는데, 파일의 경로명을 이용해서 사용할 수 있다
+```python
+>>> from glob import glob
+>>> glob('*.exe')               # 현재 디렉터리의 .exe 파일
+['python.exe', 'pythonw.exe']
+>>> glob('*.txt')               # 현재 디렉터리의 .txt 파일
+['LICENSE.txt', 'NEWS.txt']
+```
+<br>
+
+### unicodedata
+이 모듈은 모든 유니코드 문자에 대한 문자 속성을 정의하는 유니코드 문자 데이터베이스에 대한 액세스를 제공한다.
+* unicodedata.normalize(form, unistr) : 유니코드 문자열에 대한 정규확 형식 form을 반환함. form : <NFC>, <NFKC>, <NFD> 
+* unicodedata.category(chr) : chr 문자에 할당된 일반 범주를 문자열로 반환함 
+    * LU : Letter Upper case
+    * Ll : Letter Lower case
+    * Mn : Mark, no spacing
+    
+```python
+import unicodedata
+
+all_letters = string.ascii_letters + " .,;'"  # "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,:''"
+n_letters = len(all_letters)    # 58
+
+# 유니코드 문자열 --> ASCII로 변환
+def unicodeToAscii(s):
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', s)
+        if unicodedata.category(c) != 'Mn' and c in all_letters
+    )
+```
+<br>
 
