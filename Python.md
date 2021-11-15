@@ -85,3 +85,14 @@ def unicodeToAscii(s):
 ```
 <br>
 
+### os.path
+경로명에 유용한 함수를 구현한 라이브러리이다. 
+* os.path.basename(path) : 경로명 path의 기본 이름을 반환. 
+* os.path.splitext(path) : 경로명 path의 root+ext에서 root, ext를 분리함
+```python
+import os
+    
+str = './data/names\\Arabic.txt'
+print(os.path.basename(str)) # Arabic.txt
+print(os.path.splitext(os.path.basename(str)) # ('Arabic', '.txt')
+```
