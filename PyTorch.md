@@ -97,3 +97,14 @@ y = torch.rand(batch_size, N, K) # [2, 10, 256]
 output1 = torch.cat([x,y]) # [4, 10, 256]
 output2 = torch.stack([x,y]) # [M,2,N,K]
 ```
+<br>
+
+### torch.topk 함수
+```python
+torch.topk(input, k, dim=None, largest=True, sorted=True, *, out=None) -> (Tensor, LongTensor)
+```
+주어진 차원을 따라 주어진 input 텐서의 k개의 가장 큰 요소를 반환한다. 
+* input : 입력 텐서
+* k : top-k의 k
+* dim : 정렬할 차원
+<br>
