@@ -108,3 +108,11 @@ torch.topk(input, k, dim=None, largest=True, sorted=True, *, out=None) -> (Tenso
 * k : top-k의 k
 * dim : 정렬할 차원
 <br>
+
+### torch.cumsum()
+```python
+torch.cumsum(input, dim, *, dtype=None, out=None) → Tensor
+```
+dim=N의 방향으로 누적합을 구하는 함수이다. 만약 input이 N size의 벡터라면, 결과는 N size의 같은 크기의 벡터를 뱉는다.
+![image](https://user-images.githubusercontent.com/39071676/143230205-59b15f28-60b4-46f7-90bf-d7107bf04966.png)
+<br>
