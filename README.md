@@ -41,7 +41,8 @@
 <br>
 
 ## [Pycharm](https://github.com/jeewoo1025/Tips/blob/master/Pycharm.md) 
-* Pycharm 터미널 설정
+* Pycharm 터미널 Git 연동
+* Pycharm 터미널 기본 경로
 <br>
 
 ## [Django](https://github.com/jeewoo1025/Tips/blob/master/Django.md)
