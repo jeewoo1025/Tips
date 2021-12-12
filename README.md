@@ -14,6 +14,7 @@
 ## [Linux](https://github.com/jeewoo1025/Tips/blob/master/Linux.md) 
 * Ubuntu 16.04에 Anaconda 설치
 * Linux.md에 wget 명령어 추가
+* Ubuntu 버전 확인하기
 <br>
 
 ## [Anaconda](https://github.com/jeewoo1025/Tips/blob/master/Anaconda.md)
