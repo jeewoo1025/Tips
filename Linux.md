@@ -25,4 +25,35 @@ wget [옵션] [URL]
 lsb_release -a
 ```
 ![image](https://user-images.githubusercontent.com/39071676/145700549-b9fd64c8-3cbf-490a-9df7-cde3228b5763.png)
+<br>
 
+### Ubuntu 18.04에서 Python 3.7 설치하기
+* [참고 사이트](https://somjang.tistory.com/entry/PythonUbuntu%EC%97%90-Python-37-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0?category=345065)
+```shell
+# 1. 파이썬 홈페이지 소스 다운로드
+wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
+
+# 2. tgz 파일 압축 풀기
+tar xvfz Python-3.7.4.tgz 
+cd Python-3.7.4
+
+# 3. 설치하기
+./configure
+make
+sudo make install
+python3 -V
+
+# 4. 환경변수 설정하기 (~/.bashrc)
+# 파이썬 실행 위치 확인
+which python3
+ls -al /usr/bin/ | grep python
+
+# update-alternatives로 파이썬 버전 등록 및 변경
+# 버전 등록
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 3
+
+# 버전 변경
+sudo update-alternatives --config python
+```
