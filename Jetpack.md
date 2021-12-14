@@ -19,3 +19,11 @@ sudo apt update
 sudo apt upgrade
 ```
 <br>
+
+### Jetson TX2에서의 nvidia-smi 부재 문제
+이 장치에서 nvidia-smi가 없어 tegra GPU 모듈을 사용함. 덕분에 GPU 현황을 파악하기 위해서는 다음을 사용
+```shell
+sudo tegrastats
+```
+<br>
+<br>
