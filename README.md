@@ -16,6 +16,7 @@
 * Linux.md에 wget 명령어 추가
 * Ubuntu 버전 확인하기
 * Ubuntu 18.04에서 Python 3.7 설치하기
+* source 명령어
 <br>
 
 ## [Anaconda](https://github.com/jeewoo1025/Tips/blob/master/Anaconda.md)
