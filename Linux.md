@@ -57,3 +57,7 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 3
 # 버전 변경
 sudo update-alternatives --config python
 ```
+<br>
+
+### source 명령어
+Script 파일을 수정한 후 수정된 값을 바로 적용하기 위해 사용하는 명령어. ex) ~/.bashrc 수정 후 적용
