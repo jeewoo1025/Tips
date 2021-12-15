@@ -27,4 +27,13 @@ sudo apt upgrade
 sudo tegrastats
 ```
 <br>
+
+### Jetpack 버전 확인
+```shell
+sudo apt-cache show nvidia-jetpack
+
+# 번외) CUDA Toolkit 및 CuDNN 확인
+cat /usr/local/cuda/version.txt
+cat /usr/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
+```
 <br>
