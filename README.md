@@ -56,4 +56,5 @@
 * 초기 설치 사이트
 * 패기지 설치 에러시 해결방법
 * Jetson TX2에서의 nvidia-smi 부재 문제
+* Jetpack 버전 확인
 <br>
