@@ -50,6 +50,7 @@
 
 ## [Django](https://github.com/jeewoo1025/Tips/blob/master/Django.md)
 * 기본구조
+* Django 서버 시작할 때 실행할 코드 설정하기
 <br>
 
 ## [Jetpack](https://github.com/jeewoo1025/Tips/blob/master/Jetpack.md)
