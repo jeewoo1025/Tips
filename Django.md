@@ -44,7 +44,7 @@ class MyAppConfig(AppConfig):
 
 2. 정의한 클래스를 `__init__.py`에 명시해준다
 ```python
-default_app_config = 'app.broker.MyAppConfig'
+default_app_config = 'app.load.MyAppConfig'
 ```
 
 <b>※ 주의할점</b><br>
