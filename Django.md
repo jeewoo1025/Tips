@@ -24,3 +24,33 @@ python manage.py runserver
 ```python
 python manage.py runserver 8080
 ```
+<br>
+
+### Django 서버 시작할 때 실행할 코드 설정하기
+서버를 실행함과 동시에 특정 코드를 실행할 일이 생긴다. (모델 로드하기, 파일 읽기 등) 이때, AppConfig를 사용한다.
+
+1. Appconfig를 상속하는 클래스 생성하기
+```python
+### load.py
+from django.apps import AppConfig
+
+class MyAppConfig(AppConfig):
+    name = 'my_app'
+    
+    def ready(self):
+        # TODO : Write your codes to run on startup
+        pass
+```
+
+2. 정의한 클래스를 `__init__.py`에 명시해준다
+```python
+default_app_config = 'app.broker.MyAppConfig'
+```
+
+<b>※ 주의할점</b><br>
+Django가 기본적으로 코드 검증 과정에서 한번, 코드 실행 과정에서 한번, 총 2번 `MyAppConfig`를 실행한다.
+두번 실행되는 일을 피하기 위해서 Django 서버를 실행할 때 다음과 같이 `--noreload` 옵션을 넣어준다.
+```python
+python manage.py runserver --noreload
+```
+<br>
