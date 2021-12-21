@@ -116,3 +116,9 @@ str = './data/names\\Arabic.txt'
 print(os.path.basename(str)) # Arabic.txt
 print(os.path.splitext(os.path.basename(str)) # ('Arabic', '.txt')
 ```
+<br>
+    
+### 인코딩 확인 방법 - chardet
+chardet는 미리 문자열셋을 판단해주는 패키지이다. 
+
+![image](https://user-images.githubusercontent.com/39071676/146897594-a4eec407-7844-4431-95d1-ca4f1630c6d0.png)
