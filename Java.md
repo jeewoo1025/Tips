@@ -36,3 +36,14 @@ System.out.println(String.format("%-5d_", num));  // 23   _, 왼쪽 정렬
 System.out.println(String.format("%.3f_", num2));  // 123.457_, 소수점 아래 3자로 나타냄
 System.out.println(String.format("%15.2f_", num2)); //          123.46_, 글자 길이 15, 소수점 아래 2자로 나타냄
 ```
+<br>
+
+## Windows 10에 Java 설치하기
+1. [오라클](https://www.oracle.com/java/technologies/downloads/#java8) 홈페이지에서 Java exe 파일 다운로드
+2. exe 파일 실행하기
+3. 시스템 환경 변수 변경 (JAVA_HOME - jdk 경로, Path - %JAVA_HOME%\bin)
+4. cmd 창에서 `java -version` 실행 (버전확인하기)
+▶ 링크 : https://fluorite94.tistory.com/384
+<br>
+
+
