@@ -42,6 +42,7 @@
 * 올림 Math.ceil()
 * 내림 Math.floor()
 * String.format(String format, Object args)
+* Windows 10에서 Java 설치
 <br>
 
 ## [Pycharm](https://github.com/jeewoo1025/Tips/blob/master/Pycharm.md) 
