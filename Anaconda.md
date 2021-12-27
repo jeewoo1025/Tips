@@ -52,3 +52,11 @@ ERROR:root:Internal Python error in the inspect module.
 pip install tensorflow==2.0
 pip install keras==2.3.1
 ```
+<br>
+
+## import konlpy 오류 해결 (tweepy) 
+메시지는 AttributeError: module 'tweepy' has no attribute 'StreamListener'라는 오류 메시지가 뜨면, konlpy를 import하는 과정에서 tweepy.StreamListener 이 부분에서 tweepy가 StreamListener이라는 속성을 가지고 있지 않다는 의미이다. <br>
+
+▶ 해결방법
+tweepy의 버전이 4.0.0으로 업그레이드되어 생기는 문제로, tweepy를 3.7.0 ~ 3.10.0 사이로 설치해보라고 답변이 나와 있다. `pip list` 명령어를 실행하면 설치된 라이브러리 목록과 버전을 확인할 수 있다. `pip install tweepy==3.10.0`으로 버전을 다운그레이드 해보자!
+<br>
