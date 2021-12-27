@@ -42,6 +42,7 @@ conda install ipython
 주어진 경로로 이동한 후, '~'로 시작되는 디렉토리 삭제하기. 이유는 임시폴더를 만들어놨는데 아직 지우지 않았거나 이름이 잘못 배정되어있는 경우에 저런폴더가 나타난다.<br>
 ![image](https://user-images.githubusercontent.com/39071676/139386520-6939fafb-eff2-4907-9329-2dc2711eb935.png)
 <br>
+<br>
 
 ## Tensorflow 설치 오류
 ```python
@@ -53,10 +54,24 @@ pip install tensorflow==2.0
 pip install keras==2.3.1
 ```
 <br>
+<br>
 
 ## import konlpy 오류 해결 (tweepy) 
 메시지는 AttributeError: module 'tweepy' has no attribute 'StreamListener'라는 오류 메시지가 뜨면, konlpy를 import하는 과정에서 tweepy.StreamListener 이 부분에서 tweepy가 StreamListener이라는 속성을 가지고 있지 않다는 의미이다. <br>
 
-▶ 해결방법
+▶ 해결방법 <br>
 tweepy의 버전이 4.0.0으로 업그레이드되어 생기는 문제로, tweepy를 3.7.0 ~ 3.10.0 사이로 설치해보라고 답변이 나와 있다. `pip list` 명령어를 실행하면 설치된 라이브러리 목록과 버전을 확인할 수 있다. `pip install tweepy==3.10.0`으로 버전을 다운그레이드 해보자!
+<br>
+<br>
+
+## SystemError: java.nio.file.InvalidPathException 에러
+```python
+SystemError: java.nio.file.InvalidPathException: Illegal char <*> at index 52:
+```
+<br>
+
+▶ 해결방법 <br>
+1. JAVA_HOME 환경변수 설정 확인
+2. Python 버전과 JPype1 버전이 일치하는지 확인
+3. `C:\Users\suljeewoo\anaconda3\envs\zeze\Lib\site-packages\konlpy\jvm.py`에서 마지막 <b>*</b> 제거
 <br>
