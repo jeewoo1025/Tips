@@ -25,6 +25,7 @@
 * Ignoring invalid distribution -ip 에러 해결
 * Tensorflow 설치 오류
 * import konlpy 오류 해결 (tweepy) 
+* SystemError: java.nio.file.InvalidPathException 에러
 <br>
 
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 
