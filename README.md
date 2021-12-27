@@ -24,6 +24,7 @@
 * 가상환경에 대한 정보 확인하기
 * Ignoring invalid distribution -ip 에러 해결
 * Tensorflow 설치 오류
+* import konlpy 오류 해결 (tweepy) 
 <br>
 
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 
