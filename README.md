@@ -63,3 +63,6 @@
 * Jetson TX2에서의 nvidia-smi 부재 문제
 * Jetpack 버전 확인
 <br>
+
+## [Docker](https://github.com/jeewoo1025/Tips/blob/master/Docker.md)
+* docker 우분투 실행
