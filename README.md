@@ -1,4 +1,5 @@
 개발하면서 알게된 소소한 팁들
+`README.md` 파일 미리보기 사이트 : https://dillinger.io/
 
 ## [PyTorch](https://github.com/jeewoo1025/Tips/blob/master/PyTorch.md)
 * GPU에서 저장하고 GPU에서 불러오기
