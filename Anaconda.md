@@ -75,3 +75,21 @@ SystemError: java.nio.file.InvalidPathException: Illegal char <*> at index 52:
 2. Python 버전과 JPype1 버전이 일치하는지 확인
 3. `C:\Users\suljeewoo\anaconda3\envs\zeze\Lib\site-packages\konlpy\jvm.py`에서 마지막 <b>*</b> 제거
 <br>
+
+## pororo 설치 
+카카오브레인에서 제공하는 api이며 자연어처리(요약, mrc 등) 및 스피치 관련 여러 기능들을 제공함. 
+```python
+conda create -n pororo python=3.6
+conda activate pororo
+ 
+# cpu only로 설치 GPU 설치 등은 아래 링크 참조
+# https://pytorch.org/get-started/previous-versions/#v160
+conda install pytorch==1.6.0 torchvision==0.7.0 cpuonly -c pytorch
+ 
+pip install pororo
+```
+
+![image](https://user-images.githubusercontent.com/39071676/151689996-5ee39f68-090f-46d6-b6eb-bf9396f98bb1.png)
+단, 주의할점은 `torchvision==0.7.0` 버전이 필요하다. 아니면, 충돌이 일어난다.
+그리고 `fairseq==0.10.2` 가장 최신 버전으로 설치해야 하는데 여기서 권한 충돌이 일어난다.. 아직 해결중!
+<br>
