@@ -93,3 +93,17 @@ pip install pororo
 단, 주의할점은 `torchvision==0.7.0` 버전이 필요하다. 아니면, 충돌이 일어난다.
 그리고 `fairseq==0.10.2` 가장 최신 버전으로 설치해야 하는데 여기서 권한 충돌이 일어난다.. 아직 해결중!
 <br>
+<br>
+
+## Win10에 Mecab 설치방법
+* https://uwgdqo.tistory.com/363
+* https://cleancode-ws.tistory.com/97
+위의 2개의 사이트가 제일 자세히 나와있음. 주의할점은 Mecab 디렉토리를 생성할 때 꼭 `C:\Mecab`으로 해야지 아니면 따로 경로를 설정해줘야함!
+```python
+from konlpy.tag import Mecab
+
+mecab = Mecab(dicpath=r"C:/Mecab/mecab-ko-dic")
+mecab.pos("아버지가 방에 들어가신다")
+$ [('아버지', 'NNG'), ('가', 'JKS'), ('방', 'NNG'), ('에', 'JKB'), ('들어가', 'VV'), ('신다', 'EP+EC')]
+```
+<br>
