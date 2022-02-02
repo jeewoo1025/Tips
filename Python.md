@@ -122,3 +122,14 @@ print(os.path.splitext(os.path.basename(str)) # ('Arabic', '.txt')
 chardet는 미리 문자열셋을 판단해주는 패키지이다. 
 
 ![image](https://user-images.githubusercontent.com/39071676/146897594-a4eec407-7844-4431-95d1-ca4f1630c6d0.png)
+
+<br>
+
+### autoreload 
+외부에서 import한 모듈을 수정사항 발생 시 매번 Reload하기 번거롭기 때문에 자동 reload하는 방법이다.
+`%autoreload 2` 의미는 Python code를 항상 실행하기 전에 항상 모든 모듈을 Reload하라는 의미이다. 
+```python
+%load_ext autoreload
+%autoreload 2
+```
+<br>
