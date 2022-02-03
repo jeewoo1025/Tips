@@ -91,8 +91,17 @@ pip install pororo
 
 ![image](https://user-images.githubusercontent.com/39071676/151689996-5ee39f68-090f-46d6-b6eb-bf9396f98bb1.png)
 단, 주의할점은 `torchvision==0.7.0` 버전이 필요하다. 아니면, 충돌이 일어난다.
-그리고 `fairseq==0.10.2` 가장 최신 버전으로 설치해야 하는데 여기서 권한 충돌이 일어난다.. 아직 해결중!
+그리고 `fairseq==0.10.2` 가장 최신 버전으로 설치해야 하는데 ~~여기서 권한 충돌이 일어난다.. 아직 해결중!~~ (해결완)
 <br>
+
+## Fairseq 권한 해결방법
+pororo 설치 나왔던 권한 에러를 해결안 방안은 다음과 같다. 아무래도 Anaconda에서 fairseq를 설치할때 `pip` 명령어로 설치하면 버전 `0.10.2`에러가 난다. 그래서 fresh한 가상환경에서 아래의 명령어를 실행해보자.
+
+```python
+# https://anaconda.org/conda-forge/fairseq
+conda install -c conda-forge fairseq
+```
+![image](https://user-images.githubusercontent.com/39071676/152257794-06839e23-e9b3-4b19-8070-39597ed4ca0f.png)
 <br>
 
 ## Win10에 Mecab 설치방법
