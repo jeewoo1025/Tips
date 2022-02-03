@@ -29,6 +29,8 @@
 * import konlpy 오류 해결 (tweepy) 
 * SystemError: java.nio.file.InvalidPathException 에러
 * pororo 설치 
+* Fairseq 권한 해결방법
+* Win10에 Mecab 설치방법
 <br>
 
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 
@@ -70,7 +72,9 @@
 
 ## [Docker](https://github.com/jeewoo1025/Tips/blob/master/Docker.md)
 * docker 우분투 실행
+<br>
 
 ## [ETC](https://github.com/jeewoo1025/Tips/blob/master/ETC.md)
 위의 카테고리 외의 기타 tips
 * Visual Studio Tools 설치
+<br>
