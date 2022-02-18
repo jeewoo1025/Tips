@@ -149,3 +149,37 @@ torch.scatter_(dim, index, source, reduce=None) → Tensor
 * reduce (str, optional) : 기존의 값을 어떻게 update할 것인지 정의한다. 'multiply', 'add' 2가지 방법이 존재하며, 정의되지 않을 경우 기존의 값을 없애고 새로운 값으로 치환한다
 
 참고 : [blog](https://hongl.tistory.com/201)
+<br>
+
+### register_buffer를 하는 이유
+PyTorch로 구현한 Transformer를 공부하다가 Positional encoding code 중 `self.register_buffer('pe', pe)`의 의미를 모르겠어서 찾게 되었다.
+```python
+class PositionalEncoding(nn.Module):
+    "Implement the PE function."
+    def __init__(self, d_model, dropout, max_len=5000):
+        super(PositionalEncoding, self).__init__()
+        self.dropout = nn.Dropout(p=dropout)
+        
+        # Compute the positional encodings once in log space.
+        pe = torch.zeros(max_len, d_model)
+        position = torch.arange(0, max_len).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, d_model, 2) *
+                             -(math.log(10000.0) / d_model))
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        pe = pe.unsqueeze(0)
+        self.register_buffer('pe', pe)
+        
+    def forward(self, x):
+        x = x + Variable(self.pe[:, :x.size(1)], 
+                         requires_grad=False)
+        return self.dropout(x)
+```
+
+<b>왜 register_buffer로 layer를 등록하는가?</b><br>
+* optimizer를 update하지 않는다. 그러나 값은 존재한다.
+
+
+즉, network를 구성함에 있어서 중간에 update를 하지 않는 layer를 넣고 싶을 때 사용할 수 있다. <br> 이 말은 model parameter로 고려하지 않는 layer를 등록하기 위해서 이를 사용한다는 의미랑 같다. <br>
+그러므로 Positional Encoding에서 `self.register_buffer('pe', pe)`란 PE layer(=Positional Encoding)는 학습 시 가중치가 학습되지 않는다를 뜻한다.
+<br> 
