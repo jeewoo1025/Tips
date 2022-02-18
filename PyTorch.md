@@ -21,6 +21,23 @@ GPU에서 학습된 모델을 GPU에서 불러올 때는 초기화된 model에 m
 * 참조 : https://tutorials.pytorch.kr/beginner/saving_loading_models.html#device
 <br>
 
+### view 함수
+원소의 수를 유지하면서 텐서의 크기(shape)를 변경한다
+
+**view 규칙**
+1) view는 기본적으로 변경 전과 변경 후의 Tensor 안의 원소의 개수가 유지되어야 한다
+2) view는 사이즈가 설정되면 다른 차원으로부터 해당 값을 유추한다.
+```python
+ft2 = np.array([[[0, 1, 2],[3, 4, 5]],[[6, 7, 8],[9, 10, 11]]])
+ft2 = torch.FloatTensor(ft2)
+print('ft2:', ft2, ',  shape:', ft2.shape)
+
+# view를 사용하여 shape을 2차원 텐서로 변경
+print(ft2.view([-1, 3]))    # ft라는 텐서를 (?,3) 크기로 변경
+print(ft2.view([-1, 3]).shape)  # -1 : 1번째 차원은 사용자가 잘 모르겠으니 PyTorch에 맡기겠다
+```
+<br>
+
 ### squeeze, unsqueeze 함수
 * squeeze 함수 : 차원이 1인 차원을 제거해준다. 따로 차원을 설정하지 않으면 1인 차원을 모두 제거한다. 
 ```python

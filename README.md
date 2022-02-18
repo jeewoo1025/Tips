@@ -4,6 +4,7 @@
 
 ## [PyTorch](https://github.com/jeewoo1025/Tips/blob/master/PyTorch.md)
 * GPU에서 저장하고 GPU에서 불러오기
+* view 함수
 * squeeze, unsqueeze 함수
 * torch.no_grad()
 * Tensor - 정의, 생성
