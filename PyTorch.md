@@ -22,7 +22,7 @@ GPU에서 학습된 모델을 GPU에서 불러올 때는 초기화된 model에 m
 * 참조 : https://tutorials.pytorch.kr/beginner/saving_loading_models.html#device
 <br>
 
-### view 함수
+### view()
 원소의 수를 유지하면서 텐서의 크기(shape)를 변경한다
 
 **view 규칙**
@@ -39,7 +39,7 @@ print(ft2.view([-1, 3]).shape)  # -1 : 1번째 차원은 사용자가 잘 모르
 ```
 <br>
 
-### squeeze, unsqueeze 함수
+### squeeze(), unsqueeze()
 * squeeze 함수 : 차원이 1인 차원을 제거해준다. 따로 차원을 설정하지 않으면 1인 차원을 모두 제거한다. 
 ```python
 x = torch.rand(3,1,20,128)
@@ -84,10 +84,10 @@ with torch.no_grad():
 
 * 특정한 값을 가지는 Tensor 생성
 1. torch.arange() : 주어진 범위 내의 정수를 순서대로 생성
-2. torch.ones() : 주어진 사이즈의 1로 이루어진 텐서 생성
-3. torch.zeros() : 주어진 사이즈의 0으로 이루어진 텐서 생성
-4. torch.ones_like() : 사이즈를 튜플로 입력하지 않고 기존의 텐서로 정의
-5. torch.zeros_like() : 사이즈를 튜플로 입력하지 않고 기존의 텐서로 정의
+2. torch.ones() : "주어진 모양의 텐서를 만들어주는데, 1로 채워줘."
+3. torch.zeros() : "주어진 모양의 텐서를 만들어주는데, 0으로 채워줘."
+4. torch.ones_like() :  "입력 텐서와 동일한 모양의 텐서를 만들어주는데, 1로 채워줘."
+5. torch.zeros_like() : "입력 텐서와 동일한 모양의 텐서를 만들어주는데, 0으로 채워줘."
 6. torch.linspace() : 시작점과 끝점을 주어진 갯수만큼 균등하게 나눈 간격점을 행벡터로 출력
 7. torch.logspace() : 시작점과 끝점을 주어진 갯수만큼 로그간격으로 나눈 간격점을 행벡터로 출력
 <br>
@@ -119,7 +119,7 @@ output2 = torch.stack([x,y]) # [M,2,N,K]
 ```
 <br>
 
-### torch.topk 함수
+### torch.topk()
 ```python
 torch.topk(input, k, dim=None, largest=True, sorted=True, *, out=None) -> (Tensor, LongTensor)
 ```
@@ -136,3 +136,16 @@ torch.cumsum(input, dim, *, dtype=None, out=None) → Tensor
 dim=N의 방향으로 누적합을 구하는 함수이다. 만약 input이 N size의 벡터라면, 결과는 N size의 같은 크기의 벡터를 뱉는다.
 ![image](https://user-images.githubusercontent.com/39071676/143230205-59b15f28-60b4-46f7-90bf-d7107bf04966.png)
 <br>
+
+### torch.scatter_()
+새롭게 구성한 Tensor에 원하는 index에 맞게 값을 할당해주는 함수
+
+![image](https://user-images.githubusercontent.com/39071676/154638045-606b1545-094d-4700-ae8d-0bdac6613955.png)
+
+torch.scatter_(dim, index, source, reduce=None) → Tensor
+* dim (int) : indexing의 기준이 되는 축
+* index (LongTensor) : src 구성요소들이 흩어질 기준이 되는 index Tensor로 정수형 텐서로 구성되어야 한다
+* src (Tensor or float) : target Tensor를 구성할 값들이 담겨있는 Tensor. 하나의 실수로 선언되면 그 값만으로 채워진다
+* reduce (str, optional) : 기존의 값을 어떻게 update할 것인지 정의한다. 'multiply', 'add' 2가지 방법이 존재하며, 정의되지 않을 경우 기존의 값을 없애고 새로운 값으로 치환한다
+
+참고 : [blog](https://hongl.tistory.com/201)
