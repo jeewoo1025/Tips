@@ -4,14 +4,15 @@
 
 ## [PyTorch](https://github.com/jeewoo1025/Tips/blob/master/PyTorch.md)
 * GPU에서 저장하고 GPU에서 불러오기
-* view 함수
-* squeeze, unsqueeze 함수
+* view()
+* squeeze(), unsqueeze()
 * torch.no_grad()
 * Tensor - 정의, 생성
 * optim 패키지
 * Tensor 합치기: cat(), stack()
-* torch.topk 함수
+* torch.topk()
 * torch.cumsum()
+* torch.scatter_()
 <br>
 
 ## [Linux](https://github.com/jeewoo1025/Tips/blob/master/Linux.md) 
