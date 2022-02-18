@@ -1,4 +1,5 @@
 ![image](https://user-images.githubusercontent.com/39071676/143232700-9a223812-4f38-4433-a33d-ee5fac9d82e8.png)
+<img width="35%" src="https://user-images.githubusercontent.com/39071676/154631900-f26b846b-ebe6-473c-95b9-c5fed8aac566.png">
 
 ### GPU에서 저장하고 GPU에서 불러오기
 **GPU 모델 저장**
