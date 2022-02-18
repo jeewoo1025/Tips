@@ -138,7 +138,7 @@ dim=N의 방향으로 누적합을 구하는 함수이다. 만약 input이 N siz
 <br>
 
 ### torch.scatter_()
-새롭게 구성한 Tensor에 원하는 index에 맞게 값을 할당해주는 함수
+target Tensor에 원하는 index에 맞게 src Tensor의 값을 할당해주는 함수
 
 ![image](https://user-images.githubusercontent.com/39071676/154638045-606b1545-094d-4700-ae8d-0bdac6613955.png)
 
