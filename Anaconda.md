@@ -118,7 +118,9 @@ $ [('아버지', 'NNG'), ('가', 'JKS'), ('방', 'NNG'), ('에', 'JKB'), ('들�
 <br>
 
 ## pyrouge 설치방법
-summarization task에서 rouge evaluation package 설치하는 방법
+summarization task에서 rouge evaluation package 설치하는 방법 <br>
+이미 `pip` 명령어로 pyrouge가 설치되어있는 경우, `pip uninstall pyrouge`를 수행하길 바란다.
+[stackoverflow](https://stackoverflow.com/questions/45894212/installing-pyrouge-gets-error-in-ubuntu)에서 첫번째 답안을 제일 추천한다.
 
 * 잘못된 case
 ```shell
@@ -129,15 +131,30 @@ pyrouge만 설치하고 환경 설정을 하지 않았다면 위와 같은 Error
 
 * 올바른 case
 ```python
+# install pyrouge from source
 git clone https://github.com/bheinzerling/pyrouge
 cd pyrouge
-python setup.py install
-pyrouge_set_rouge_path /absolute/path/to/ROUGE-1.5.5/directory
-python -m pyrouge.test
+pip install -e .
 
->>> 실행 성공 시 
-Ran 11 tests in 6.322s
-OK
+# Install official ROUGE script
+git clone https://github.com/andersjo/pyrouge.git rouge
+
+# Point Pyrouge to official rouge script
+# pyrouge_set_rouge_path [absolute path]
+pyrouge_set_rouge_path /workspace/pyrouge/rouge/tools/ROUGE-1.5.5/
+
+# Install libxml parser
+sudo apt-get install libxml-parser-perl
+
+# Regenerate the Exceptions DB
+cd rouge/tools/ROUGE-1.5.5/data
+rm WordNet-2.0.exc.db
+./WordNet-2.0-Exceptions/buildExeptionDB.pl ./WordNet-2.0-Exceptions ./smart_common_words.txt ./WordNet-2.0.exc.db
+
+# Run the tests
+python -m pyrouge.test
 ```
-※ [stackoverflow link](https://stackoverflow.com/questions/45894212/installing-pyrouge-gets-error-in-ubuntu)
+
+* 성공 시 실행화면 <br>
+![image](https://user-images.githubusercontent.com/39071676/156963768-b830b348-76f5-4303-88aa-dc657227fd59.png)
 <br>
