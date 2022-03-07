@@ -33,6 +33,7 @@
 * pororo 설치 
 * Fairseq 권한 해결방법
 * Win10에 Mecab 설치방법
+* pyrouge 설치방법
 <br>
 
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 

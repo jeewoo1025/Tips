@@ -116,3 +116,28 @@ mecab.pos("아버지가 방에 들어가신다")
 $ [('아버지', 'NNG'), ('가', 'JKS'), ('방', 'NNG'), ('에', 'JKB'), ('들어가', 'VV'), ('신다', 'EP+EC')]
 ```
 <br>
+
+## pyrouge 설치방법
+summarization task에서 rouge evaluation package 설치하는 방법
+
+* 잘못된 case
+```shell
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.pyrouge/settings.ini'
+```
+pyrouge만 설치하고 환경 설정을 하지 않았다면 위와 같은 Error가 뜬다
+<br>
+
+* 올바른 case
+```python
+git clone https://github.com/bheinzerling/pyrouge
+cd pyrouge
+python setup.py install
+pyrouge_set_rouge_path /absolute/path/to/ROUGE-1.5.5/directory
+python -m pyrouge.test
+
+>>> 실행 성공 시 
+Ran 11 tests in 6.322s
+OK
+```
+※ [stackoverflow link](https://stackoverflow.com/questions/45894212/installing-pyrouge-gets-error-in-ubuntu)
+<br>
