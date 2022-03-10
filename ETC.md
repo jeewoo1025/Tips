@@ -8,3 +8,8 @@ Microsoft (R) C/C Optimizing Compiler 라는 이름을 볼 수 있다.
 > "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\Common7\\Tools\\VsDevCmd.bat"
 > cl
 ```
+<br>
+
+## vscode Python에서 argument가 있는 파일 디버그방법
+launch.json 파일에서 `"args":[]` 생성 → 구성 추가 → 순서대로 문자열 타입으로 arguments 입력 → 실행
+* link : https://zosystem.tistory.com/282
