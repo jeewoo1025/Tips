@@ -75,6 +75,8 @@
 
 ## [Docker](https://github.com/jeewoo1025/Tips/blob/master/Docker.md)
 * docker 우분투 실행
+* docker 이미지 커밋
+* docker 컨테이너 
 <br>
 
 ## [ETC](https://github.com/jeewoo1025/Tips/blob/master/ETC.md)
