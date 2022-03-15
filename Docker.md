@@ -18,6 +18,9 @@ docker commit [CONTAINER ID] [IMAGE NAME]
 ```
 4. `docker images` 명령어로 새로운 이미지가 생성된 것을 확인하기
 5. 새로 생성된 이미지로부터 도커 컨테이너 실행할 수 있다. 실행 시 이전까지 진행했던 작업 상태가 보존된 것을 확인할 수 있다
+```python
+docker run -it [REPOSITORY]:[TAG]
+```
 <br>
 
 ## docker 컨테이너 삭제
