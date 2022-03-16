@@ -31,3 +31,10 @@ docker rm [컨테이너 id]
 # 이름으로 삭제
 docker rm [컨테이너 이름]
 ```
+<br>
+
+## docker inspect
+컨테이너와 이미지의 세부 정보를 JSON 형태로 출력하는 명령어이다. 
+```python
+docker inspect [컨테이너 또는 이미지 이름]
+```
