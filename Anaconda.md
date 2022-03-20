@@ -158,3 +158,9 @@ python -m pyrouge.test
 * 성공 시 실행화면 <br>
 ![image](https://user-images.githubusercontent.com/39071676/156963768-b830b348-76f5-4303-88aa-dc657227fd59.png)
 <br>
+
+## pytorch_transformers 설치방법
+NLP의 SOTA pre-trained models 라이브러리 설치 방법
+```python
+pip install pytorch-transformers
+```
