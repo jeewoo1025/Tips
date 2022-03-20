@@ -61,3 +61,35 @@ sudo update-alternatives --config python
 
 ### source 명령어
 Script 파일을 수정한 후 수정된 값을 바로 적용하기 위해 사용하는 명령어. ex) ~/.bashrc 수정 후 적용
+<br>
+
+## java 설치
+1. java 11 설치
+```
+sudo apt-get install openjdk-11-jdk
+
+# 설치 확인
+java --version
+```
+![image](https://user-images.githubusercontent.com/39071676/159156578-5847ed80-ee6f-4a88-b126-1ea16c993316.png)
+
+2. java 환경변수 설치하기
+```
+# javac 위치 확인
+which javac
+readlink -f /usr/bin/javac
+```
+![image](https://user-images.githubusercontent.com/39071676/159156598-a3372dce-a7d4-49c0-9c3d-736f8f4a26f2.png)
+
+```
+# 임시로 설정파일에 설정하기
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$JAVA_HOME/bin/:$PATH
+export CLASSPATH=$JAVA_HOME/lib:$CLASSPATH
+
+# 확인
+echo $JAVA_HOME
+echo $PATH
+echo $CLASSPATH
+```
+<br>
