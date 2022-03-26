@@ -38,3 +38,12 @@ docker rm [컨테이너 이름]
 ```python
 docker inspect [컨테이너 또는 이미지 이름]
 ```
+<br>
+
+## docker images 삭제
+```python
+docker rmi [이미지 id]
+
+docker images
+```
+<br>
