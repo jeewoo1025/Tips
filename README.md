@@ -76,7 +76,9 @@
 ## [Docker](https://github.com/jeewoo1025/Tips/blob/master/Docker.md)
 * docker 우분투 실행
 * docker 이미지 커밋
-* docker 컨테이너 
+* docker 컨테이너 삭제
+* docker inspect
+* docker images 삭제
 <br>
 
 ## [ETC](https://github.com/jeewoo1025/Tips/blob/master/ETC.md)
