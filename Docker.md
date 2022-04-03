@@ -47,3 +47,13 @@ docker rmi [이미지 id]
 docker images
 ```
 <br>
+
+## docker 메모리 사용량 확인하기
+docker contiainer CPU/메모리 사용량 확인
+```python
+# 전체 컨테이너 확인
+docker stats 
+
+# 특정 컨테이너 확인
+docker stats [컨테이너 id or 이름]
+```
