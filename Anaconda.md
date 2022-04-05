@@ -22,6 +22,16 @@ conda list
 ```
 <br>
 
+## 가상환경 제거하기
+설치한 가상환경을 제거하고 싶다면 아래의 명령어를 입력하면 된다.
+```shell
+conda remove --name [가상환경 이름] --all
+
+conda env remove --n [가상환경 이름]
+```
+
+<br>
+
 ## jupyter notebook에서 import torch 에러
 가상환경에서 pytorch를 설치했음에도 불구하고 jupyter notebook에서 `import torch`가 실행되지 않을 수도 있다.
 
