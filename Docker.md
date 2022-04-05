@@ -60,12 +60,12 @@ docker stats [컨테이너 id or 이름]
 <br>
 
 ## VS code에서 원격 서버의 docker contanier로 바로 접속해서 실행하기
-▶ 개발환경
+▶ 개발환경 <br>
 로컬 : Window 10 <br>
 서버 : Ubuntu 20.04 LTS <br>
 <br>
 
-▶ 실행방법
+▶ 실행방법 <br>
 1. 서버 1 ~ 서버 4 중 원하는 서버에서 docker container 실행 (기존과 동일) <br>
 2. 로컬 VS code에서 `Ctrl + Shift + P` 키 누름 <br>
 3. Remote Containers: Attach to Running Container 클릭 -> 원하는 container 선택 <br>
