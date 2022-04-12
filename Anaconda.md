@@ -107,11 +107,21 @@ pip install pororo
 ## Fairseq 권한 해결방법
 pororo 설치 나왔던 권한 에러를 해결안 방안은 다음과 같다. 아무래도 Anaconda에서 fairseq를 설치할때 `pip` 명령어로 설치하면 버전 `0.10.2`에러가 난다. 그래서 fresh한 가상환경에서 아래의 명령어를 실행해보자.
 
+### 방안1) conda 명령어
 ```python
 # https://anaconda.org/conda-forge/fairseq
 conda install -c conda-forge fairseq
 ```
 ![image](https://user-images.githubusercontent.com/39071676/152257794-06839e23-e9b3-4b19-8070-39597ed4ca0f.png)
+
+### 방안2) git clone 후 폴더에서 실행
+1) anaconda 관리자 권한으로 실행 (이 경우 conda 'base' 환경에서 설치를 진행해야 한다) <br>
+2) github fairseq에서 나와있는 설치 방법대로 실행함 <br>
+```python
+git clone https://github.com/pytorch/fairseq
+cd fairseq
+pip install --editable ./
+```
 <br>
 
 ## Win10에 Mecab 설치방법
