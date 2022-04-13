@@ -133,3 +133,17 @@ chardet는 미리 문자열셋을 판단해주는 패키지이다.
 %autoreload 2
 ```
 <br>
+
+### function annotation
+```python
+def get_logger(name: str) -> logging.Logger:
+    ....
+```
+위와 같이 python 문법에서 이상한 표시(매개변수 뒤에 `:`가 붙거나 함수명 뒤에 `->`가 붙은걸)를 확인할 수 있을 것이다. 
+이는 바로 function annotation이다. Python에서는 C나 Java와 같이 자료형을 명시하지 않는데 이는 코드를 이해할 때 해석의 어려움을 겪는다. 
+그래서 Python에서는 function annotation을 사용하여 변수의 자료형에 관한 주석을 달 수 있다. 
+    
+* `: expression` : 매개변수의 자료형에 대한 주석 
+* `-> expression` : return의 자료형에 대한 주석
+    
+<br>
