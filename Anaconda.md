@@ -207,6 +207,9 @@ CLASSPATH="$CLASSPATH:`realpath $file`"; done
 echo "the quick brown fox jumped over the lazy dog" > input.txt
 java -mx3g edu.stanford.nlp.pipeline.StanfordCoreNLP -outputFormat json -file input.txt
 ```
+
+▼ 5번 실행화면
+![image](https://user-images.githubusercontent.com/39071676/169191359-d12e927d-422e-4597-a19d-8bd2e601661e.png)
 <br>
 
 ## NLTK library 설치
