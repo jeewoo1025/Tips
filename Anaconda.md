@@ -184,3 +184,29 @@ NLP의 SOTA pre-trained models 라이브러리 설치 방법
 ```python
 pip install pytorch-transformers
 ```
+<br>
+
+## Standford CoreNLP 설치
+* link : https://stanfordnlp.github.io/CoreNLP/download.html
+
+```python
+# 1) Download the CoreNLP zip file
+wget http://nlp.stanford.edu/software/stanford-corenlp-latest.zip
+
+# 2) Unzip the release
+unzip stanford-corenlp-latest.zip
+
+# 3) Enter the newly unzipped directory
+cd stanford-corenlp-4.4.0
+
+# 4) Set up your classpath
+for file in `find . -name "*.jar"`; do export
+CLASSPATH="$CLASSPATH:`realpath $file`"; done
+
+# 5) Try it out
+echo "the quick brown fox jumped over the lazy dog" > input.txt
+java -mx3g edu.stanford.nlp.pipeline.StanfordCoreNLP -outputFormat json -file input.txt
+```
+<br>
+
+## NLTK library 설치
