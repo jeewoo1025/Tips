@@ -66,6 +66,9 @@ Script 파일을 수정한 후 수정된 값을 바로 적용하기 위해 사�
 ## java 설치
 1. java 11 설치
 ```
+sudo apt-get update
+sudo apt-get upgrade
+
 sudo apt-get install openjdk-11-jdk
 
 # 설치 확인
