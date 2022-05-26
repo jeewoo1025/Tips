@@ -183,3 +183,12 @@ class PositionalEncoding(nn.Module):
 즉, network를 구성함에 있어서 중간에 update를 하지 않는 layer를 넣고 싶을 때 사용할 수 있다. <br> 이 말은 model parameter로 고려하지 않는 layer를 등록하기 위해서 이를 사용한다는 의미랑 같다. <br>
 그러므로 Positional Encoding에서 `self.register_buffer('pe', pe)`란 PE layer(=Positional Encoding)는 학습 시 가중치가 학습되지 않는다를 뜻한다.
 <br> 
+
+### Tensorboard 사용법
+```python
+# tensorboard log 출력
+tensorboard --logdir=./log
+
+# 브라우저에 접속
+http://localhost:6006/
+```
