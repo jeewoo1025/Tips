@@ -75,3 +75,20 @@ docker stats [컨테이너 id or 이름]
 [디버깅모드]는 밑의 영상 링크 참고 <br>
 개인적으로 https://www.youtube.com/watch?v=w77D5KuJ7eE 이 동영상이 제일 설명 잘 되있음 <br>
 해당 동영상에서 디버깅 방법도 자세히 설명되있음. <br>
+
+## docker save & load
+commit한 docker image를 backup하고 load하는 방법 <br>
+
+### docker save
+commit한 상태 백업하기
+```python
+docker save -o [저장할 이름].tar [이미지 이름]
+docker save -o jeewoo_brio.tar jeewoo_brio/pytorch:latest
+```
+
+### docker load
+tar 파일을 복원하기
+```python
+docker load < [백업한 파일이름].tar
+docker load < jeewoo_brio.tar
+```
