@@ -83,6 +83,7 @@
 * docker inspect
 * docker images 삭제
 * docker 메모리 사용량 확인하기
+* docker save & load
 <br>
 
 ## [ETC](https://github.com/jeewoo1025/Tips/blob/master/ETC.md)
