@@ -36,6 +36,7 @@
 * Win10에 Mecab 설치방법
 * pyrouge 설치방법
 * pytorch_transformers 설치방법
+* Wandb 사용하기
 <br>
 
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 
