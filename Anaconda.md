@@ -211,3 +211,33 @@ java -mx3g edu.stanford.nlp.pipeline.StanfordCoreNLP -outputFormat json -file in
 ▼ 5번 실행화면
 ![image](https://user-images.githubusercontent.com/39071676/169191359-d12e927d-422e-4597-a19d-8bd2e601661e.png)
 <br>
+
+## Wandb 사용하기
+* [참조 사이트](https://greeksharifa.github.io/references/2020/06/10/wandb-usage/)
+* [wandb site](https://wandb.ai/site)
+```python
+# 0. wandb 설치
+pip install wandb
+
+# 1. 초기 설정
+wandb login
+
+## 프로젝트 이름 설정
+wandb.init(proejct=[프로젝트 이름], reinit=True)
+
+## 실행 이름 설정
+wandb.run.name = [실행 이름]
+wandb.run.save()
+
+# 2. config 저장
+wandb.config.update(args)
+
+# 3. model 저장
+wandb.watch(model)
+
+# 4. log 저장
+wandb.log({
+	'accuracy': acc,
+	'loss': loss
+})
+```
