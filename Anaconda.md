@@ -241,3 +241,14 @@ wandb.log({
 	'loss': loss
 })
 ```
+
+## cuDF 활용하기
+
+1. RAPIDS 설치하기 (Docker)
+link : https://rapids.ai/start.html
+
+```python
+# download and install
+docker pull rapidsai/rapidsai-core:22.08-cuda11.4-base-ubuntu20.04-py3.8
+docker run --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=1 --volume ~/workspace:/workspace -it --name jeewoo_test rapidsai/rapidsai-core:22.08-cuda11.4-base-ubuntu20.04-py3.8 /bin/bash
+```
