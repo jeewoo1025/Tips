@@ -96,3 +96,12 @@ echo $PATH
 echo $CLASSPATH
 ```
 <br>
+
+## mv 명령어
+```
+# 현재 test 디렉토리를 back 하위 디렉토리로 옮김
+mv test/ ./back
+
+# 현재 경로에서 json 확장자를 가진 모든 파일을 /train 폴더로 이동
+mv *.json /train
+```
