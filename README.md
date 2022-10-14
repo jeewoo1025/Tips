@@ -13,6 +13,8 @@
 * torch.topk()
 * torch.cumsum()
 * torch.scatter_()
+* register_buffer를 하는 이유
+* Tensorboard 사용법
 <br>
 
 ## [Linux](https://github.com/jeewoo1025/Tips/blob/master/Linux.md) 
@@ -39,6 +41,7 @@
 * pytorch_transformers 설치방법
 * Standford CoreNLP 설치
 * Wandb 사용하기
+* cuDF 활용하기
 <br>
 
 ## [Python](https://github.com/jeewoo1025/Tips/blob/master/Python.md) 
@@ -92,4 +95,5 @@
 ## [ETC](https://github.com/jeewoo1025/Tips/blob/master/ETC.md)
 위의 카테고리 외의 기타 tips
 * Visual Studio Tools 설치
+* vscode Python에서 argument가 있는 파일 디버그방법
 <br>
