@@ -2,6 +2,28 @@ Anaconda는 대규모 데이터 처리, 예측 분석 및 과학 컴퓨팅에 �
 아나콘다 배포에는 1,000개 이상의 데이터 패키지, 콘다 명령줄 도구 및 아나콘다 네비게이터라는 데스크톱 그래픽 사용자 인터페이스가 함께 제공됩니다.
 <br>
 
+## 기본 사용법
+```python
+# 버전화인 
+conda --version
+
+# 아나콘다 업데이트
+conda update conda
+
+# 가상환경 생성하기
+conda create -n <환경명> python=<버전>
+conda create -n jeewoo_test python=3.8
+
+# 가상환경 활성화하기
+conda activate <환경명>
+
+# 가상환경 비활성화하기
+conda deactivate <환경명>
+
+# 가상환경 삭제
+conda remove -n <환경명> -0all
+```
+
 ## import gensim시에 cannot import name 'open' from 'smart_open' 이슈
 gensim 이슈 버전 때문. 그래서 구체적인 버전을 정해서 다시 설치
 ```shell
