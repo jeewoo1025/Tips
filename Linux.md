@@ -105,3 +105,12 @@ mv test/ ./back
 # 현재 경로에서 json 확장자를 가진 모든 파일을 /train 폴더로 이동
 mv *.json /train
 ```
+<br>
+
+## pyemd 설치하기
+* link : https://pypi.org/project/pyemd/
+* g++ 설치 안 하면, pyemd 설치 시 에러남
+```
+sudo apt-get install g++
+sudo apt-get install pyemd
+```
