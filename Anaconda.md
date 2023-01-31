@@ -274,3 +274,16 @@ link : https://rapids.ai/start.html
 docker pull rapidsai/rapidsai-core:22.08-cuda11.4-base-ubuntu20.04-py3.8
 docker run --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=1 --volume ~/workspace:/workspace -it --name jeewoo_test rapidsai/rapidsai-core:22.08-cuda11.4-base-ubuntu20.04-py3.8 /bin/bash
 ```
+<br>
+
+## pyemd 설치
+moverscore를 사용하기 위해서는, pyemd가 설치되어있어야 한다. 하지만, 만약 설치 중 에러가 난다면, gcc, g++이 설치되어있는지 확인해라!
+```python
+# check update
+apt-get update
+
+sudo apt-get install g++
+sudo apt-get install gcc
+
+pip install pyemd
+```
