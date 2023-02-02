@@ -114,3 +114,11 @@ mv *.json /train
 sudo apt-get install g++
 sudo apt-get install pyemd
 ```
+<br>
+
+## jsonnet && allennlp 설치하기
+아래 순서대로 설치해야지 에러가 안 남.
+```python
+conda install -c conda-forge jsonnet
+pip install allennlp
+```
