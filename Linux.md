@@ -111,8 +111,13 @@ mv *.json /train
 * link : https://pypi.org/project/pyemd/
 * g++ 설치 안 하면, pyemd 설치 시 에러남
 ```
+# check plz
+sudo apt-get update
 sudo apt-get install g++
+
+# 2가지 option 중 선택하기
 sudo apt-get install pyemd
+conda isntall -c conda-forge pyeemd
 ```
 <br>
 
