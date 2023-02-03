@@ -122,3 +122,10 @@ sudo apt-get install pyemd
 conda install -c conda-forge jsonnet
 pip install allennlp
 ```
+<br>
+
+## moverscore 설치하기
+pip으로 설치하면 outdated version이기 때문에 아래의 명령문으로 설치하는 추천한다. 안그러면, `Error max_len` 날 수 있음 주의.
+```python
+pip install git+https://github.com/AIPHES/emnlp19-moverscore.git
+```
