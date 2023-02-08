@@ -117,7 +117,7 @@ sudo apt-get install g++
 
 # 2가지 option 중 선택하기
 sudo apt-get install pyemd
-conda isntall -c conda-forge pyeemd
+conda install -c conda-forge pyemd
 ```
 <br>
 
