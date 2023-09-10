@@ -61,3 +61,25 @@ def dfs(graph, v, visited):
         visited[cur_node] = True
         stack.append(i)
 ```
+
+## 백트래킹
+- 해를 찾는 도중 막히면 되돌아가서 다시 해를 찾는 기법
+- 특징
+    - 어떤 노드에서 출발하는 경로가 그 해결책으로 이어질 것 같지 않으면 더이상 경로를 탐색하지 않음으로써 시도 횟수 감소
+    - 불필요한 경로의 조기 차단
+```python
+def 백트래킹(n):
+  if 정답이면:
+    출력 or 저장
+  else:
+    for 모든 자식 노드에 대해
+      if promising(m):   # 유망한지 확인
+        자식노드로 이동
+        백트래킹(n+1)
+        부모 노드로 이동
+
+def promising(m):
+  if 조건에 안 맞으면:
+    return False
+  return True
+```
