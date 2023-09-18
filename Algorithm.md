@@ -83,3 +83,22 @@ def promising(m):
     return False
   return True
 ```
+<br>
+
+## zip으로 행렬 뒤지기
+```python
+def rotate(M, dir='left'):
+  if dir=='left': # left 90 degree rotate
+    out = list(reversed(list(map(list, zip(*M)))))
+  elif dir=='right':   # right 90 degree rorate
+    out = list(map(list, zip(*reversed(M))))
+  elif dir=='transpose':
+    out = list(map(list, zip(*M)))
+  return out
+
+M = [[1,2,3,4],[5,6,7,8]]
+
+print(rotate(M,dir='left'))  # [[4,8],[3,7],[2,6],[1,5]]
+print(rotate(M,dir='right')) # [[5,1],[6,2],[7,3],[8,4]]
+print(rotate(M,dir='transpose'))  # [[1,5],[2,6],[3,7],[4,8]]
+```
