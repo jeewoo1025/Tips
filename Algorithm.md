@@ -104,3 +104,22 @@ print(rotate(M,dir='left'))  # [[4,8],[3,7],[2,6],[1,5]]
 print(rotate(M,dir='right')) # [[5,1],[6,2],[7,3],[8,4]]
 print(rotate(M,dir='transpose'))  # [[1,5],[2,6],[3,7],[4,8]]
 ```
+<br>
+
+## 2차원 => 1차원 리스트 변환
+1. sum()
+```python
+list1 = [[1, 10], [2, 22], [3, 19], [4, 7]]
+list2 = sum(list1, [])
+print(list2)  # [1, 10, 2, 22, 3, 19, 4, 7]
+```
+
+2. itertools
+```python
+import itertools
+
+list1 = [[1, 10], [2, 22], [3, 19], [4, 7]]
+list2 = list(itertools.chain(*list1))
+print(list2)  # [1, 10, 2, 22, 3, 19, 4, 7]
+```
+
