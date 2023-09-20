@@ -122,4 +122,19 @@ list1 = [[1, 10], [2, 22], [3, 19], [4, 7]]
 list2 = list(itertools.chain(*list1))
 print(list2)  # [1, 10, 2, 22, 3, 19, 4, 7]
 ```
+<br>
+
+## sorted 우선순위
+- 우선순위가 높은 순서대로 정렬 예시
+```python
+# 아기상어 16236번
+
+....
+  tmp.append((nx,ny,distance[nx][ny]))   # 거리 
+....
+
+# 우선순위: 거리가 가까운 물고기 > 가장 위에 있는 물고기 > 가장 왼쪽에 있는 물고기
+tmp = sorted(tmp, key=lambda x:(-x[2], -x[0], -x[1]))
+```
+
 
