@@ -136,6 +136,7 @@ print(list2)  # [1, 10, 2, 22, 3, 19, 4, 7]
 # 우선순위: 거리가 가까운 물고기 > 가장 위에 있는 물고기 > 가장 왼쪽에 있는 물고기
 tmp = sorted(tmp, key=lambda x:(-x[2], -x[0], -x[1]))
 ```
+<br>
 
 ## 마이너스를 % 계산하면?
 - 양수임
@@ -149,3 +150,24 @@ cnt = 2
 for i in range(d, d-8, -1):
   i %= 8
 ```
+<br>
+
+### 시계방향으로 90도 / 180도 회전
+```python
+def rotate_90():
+    global arr, N
+    ret = [[0]*N for _ in range(N)]
+    for r in range(N):
+        for c in range(N):
+            ret[c][N-1-r] = arr[r][c]
+    return ret
+
+def rotate_180():
+    global arr, N
+    ret = [[0]*N for _ in range(N)]
+    for r in range(N):
+        for c in range(N):
+            ret[N-1-r][N-1-c] = arr[r][c]
+    return ret
+```
+<br>
