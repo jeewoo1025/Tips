@@ -152,7 +152,7 @@ for i in range(d, d-8, -1):
 ```
 <br>
 
-### 시계방향으로 90도 / 180도 회전
+### 시계방향으로 90도 / 180도 / 270도 회전
 ```python
 def rotate_90():
     global arr, N
@@ -168,6 +168,14 @@ def rotate_180():
     for r in range(N):
         for c in range(N):
             ret[N-1-r][N-1-c] = arr[r][c]
+    return ret
+
+def rotate_270():   # -90도랑 동일함
+    global arr, N
+    ret = [[0]*N for _ in range(N)]
+    for r in range(N):
+        for c in range(N):
+            ret[N-1-c][r] = arr[r][c]
     return ret
 ```
 <br>
