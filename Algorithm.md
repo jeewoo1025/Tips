@@ -179,3 +179,48 @@ def rotate_270():   # -90도랑 동일함
     return ret
 ```
 <br>
+
+### 다익스트라
+- 특징: 최단 경로를 구하는 과정에서 '각 노드에 대한 현재까지의 최단거리' 정보를 항상 1차원 리스트에 저장하며 리스트를 계속 갱신한다는 특징이 있음
+- 현재 가장 가까운 노드를 저장하기 위해 우선순위 큐를 사용함
+```python
+1. 출발노드를 설정
+2. 최단거리 테이블 초기화
+3. 방문하지 않은 노드 중 최단 거리가 가장 짧은 노드를 선택함
+4. 해당 노드를 거쳐 다른 노드로 가는 비용을 계산하여 최단거리 테이블을 갱신함
+5. 3~4번 반복
+```
+<br>
+
+```python
+import heapq
+INF = int(1e9)
+distance = [INF]*(N+1)    # 최단거리 테이블
+
+# 모든 간선 정보 입력받기
+for _ in range(m):
+  a, b, c = map(int, input().split())
+  # a번 노드에서 b번 노드로 가는 비용이 c라는 의미
+  graph[a].append((b,c))
+
+
+def dijkstra(start):
+  q = []
+
+  # 시작 노드로 가기 위한 최단경로는 0으로 설정하여 큐에 삽입
+  heapq.heappush(q, (0, start))   # (거리, 노드) 삽입
+  distance[start] = 0
+  while q:
+    # 가장 최단거리가 짧은 노드에 대한 정보 꺼내기
+    dist, now = heapq.heappop(q)
+
+    # 현재 노드가 이미 처리된 적이 있는 노드라면 무시
+    if distance[now] < dist:
+      continue
+    # 현재 노드와 연결된 다른 입접한 노드들을 확인
+    for i in graph[now]:
+      cost = dist + i[1]
+      if cost < distance[i[0]]:
+        distance[i[0]] = cost
+        heapq.heappush(q, (cost, i[0]))
+```
